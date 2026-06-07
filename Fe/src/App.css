@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   🎨 C-LEARNING - ROOT COLOR SYSTEM
+   Inspired by Traditional Chinese Red
+   Style: Modern Minimal with Oriental Touch
+   ============================================ */
+
+:root {
+    /* === PRIMARY COLORS - Chinese Red Family === */
+    --color-primary: #B91C1C;
+    /* Chinese Crimson - Đỏ son trầm */
+    --color-primary-dark: #7F1D1D;
+    /* Wine Red - Đỏ rượu vang */
+    --color-primary-light: #DC2626;
+    /* Vermillion - Đỏ chu sa */
+    --color-primary-50: #FEF2F2;
+    /* Rose Mist - Hồng sương */
+    --color-primary-100: #FEE2E2;
+    /* Blush Pink - Hồng nhạt */
+    --color-primary-200: #FECACA;
+    /* Soft Rose */
+
+    /* === SECONDARY COLORS - Charcoal Navy === */
+    --color-secondary: #1E293B;
+    /* Charcoal Navy - Xanh than đậm */
+    --color-secondary-light: #334155;
+    /* Slate - Xám xanh */
+    --color-secondary-dark: #0F172A;
+    /* Midnight - Đen xanh */
+
+    /* === ACCENT COLORS - Antique Gold === */
+    --color-accent: #D97706;
+    /* Antique Gold - Vàng đồng cổ */
+    --color-accent-light: #F59E0B;
+    /* Amber - Hổ phách */
+    --color-accent-dark: #B45309;
+    /* Bronze - Đồng */
+
+    /* === NEUTRAL COLORS - Warm Grays === */
+    --color-neutral-50: #FAFAF9;
+    /* Pearl White - Trắng ngà */
+    --color-neutral-100: #F5F5F4;
+    /* Soft Cream - Kem nhạt */
+    --color-neutral-200: #E7E5E4;
+    /* Light Stone */
+    --color-neutral-300: #D6D3D1;
+    /* Silver Gray */
+    --color-neutral-400: #A8A29E;
+    /* Warm Gray */
+    --color-neutral-500: #78716C;
+    /* Stone Gray */
+    --color-neutral-600: #57534E;
+    /* Dark Stone */
+    --color-neutral-700: #44403C;
+    /* Charcoal */
+    --color-neutral-800: #292524;
+    /* Deep Charcoal */
+    --color-neutral-900: #1C1917;
+    /* Near Black */
+
+    /* === SEMANTIC COLORS === */
+    --color-success: #059669;
+    /* Jade Green - Xanh ngọc */
+    --color-success-light: #10B981;
+    --color-warning: #D97706;
+    /* Amber */
+    --color-warning-light: #F59E0B;
+    --color-error: #DC2626;
+    /* Red */
+    --color-error-light: #EF4444;
+    --color-info: #0284C7;
+    /* Sky Blue */
+    --color-info-light: #0EA5E9;
+
+    /* === BACKGROUND COLORS === */
+    --bg-primary: #FAFAF9;
+    /* Main background */
+    --bg-secondary: #F5F5F4;
+    /* Card/Section background */
+    --bg-tertiary: #FFFFFF;
+    /* White surfaces */
+    --bg-accent: #FEF2F2;
+    /* Highlighted sections */
+    --bg-dark: #1E293B;
+    /* Dark sections/footer */
+
+    /* === TEXT COLORS === */
+    --text-primary: #1C1917;
+    /* Headings, important text */
+    --text-secondary: #57534E;
+    /* Body text */
+    --text-muted: #78716C;
+    /* Captions, hints */
+    --text-inverse: #FAFAF9;
+    /* Text on dark bg */
+    --text-accent: #B91C1C;
+    /* Links, highlights */
+
+    /* === BORDER & DIVIDER === */
+    --border-light: #E7E5E4;
+    --border-default: #D6D3D1;
+    --border-dark: #A8A29E;
+
+    /* === SHADOWS === */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-primary: 0 4px 14px 0 rgb(185 28 28 / 0.25);
+
+    /* === BORDER RADIUS === */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+
+    /* === TYPOGRAPHY === */
+    --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+
+    /* === TRANSITIONS === */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+}
+
+/* === GLOBAL STYLES === */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === UTILITY CLASSES === */
+.input {
+    @apply border rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2;
+    border-color: var(--border-default);
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+    --tw-ring-color: var(--color-primary-200);
+}
+
+/* === BUTTON STYLES === */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-inverse);
+    transition: all var(--transition-normal);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-primary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    transition: all var(--transition-normal);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--text-inverse);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--text-inverse);
+    transition: all var(--transition-normal);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-accent-dark);
+}
+
+/* === CARD STYLES === */
+.card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* === LINK STYLES === */
+a {
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* === SELECTION === */
+::selection {
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-dark);
+}
+
+/* === SCROLLBAR (Modern browsers) === */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-400);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-500);
+}

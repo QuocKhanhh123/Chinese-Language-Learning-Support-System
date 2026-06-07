@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C" />
+      <stop offset="50%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#7F1D1D" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#bg)" />
+  <!-- Corner accent bar -->
+  <rect x="30" y="2" width="14" height="4" rx="2" fill="url(#accent)" opacity="0.9" />
+  <!-- Letter C -->
+  <text x="16" y="33" text-anchor="middle" fill="white" font-size="26" font-family="Inter, Segoe UI, sans-serif" font-weight="800" letter-spacing="-1">C</text>
+  <!-- Knowledge/book lines -->
+  <line x1="28" y1="16" x2="40" y2="16" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" />
+  <line x1="28" y1="22" x2="38" y2="22" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" />
+  <line x1="28" y1="28" x2="36" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" />
+</svg>
